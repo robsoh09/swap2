@@ -1,7 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 
-const endpointUrl = "https://holesky.infura.io/v3/220c43366e0e47fda9f62c5850cf9cd8";
-const privateKey = "1e17aa39641cae3cafc58d671e60fb728c518149bcf0d969beaa774d166b08fa";
+const endpointUrl = "https://holesky.infura.io/v3/";
+const privateKey = "";
 
 
 /** @type import('hardhat/config').HardhatUserConfig */
