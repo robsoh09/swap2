@@ -35,47 +35,5 @@ async function sendBitGoTx() {
   console.log(transaction)
   
 
- /* ({ data, amount } = liquidityPoolContract.methods().addLiquidityETH.call({
-    token: tokenContract.address,
-    amountTokenDesired: amountTokenDesired.toString(10),
-    amountTokenMin: amountTokenMin.toString(10),
-    amountETHMin: amountETHMin.toString(10),
-    to: walletAddress,
-    deadline,
-  })); */
-
-     
-  
-  
- /*transaction = await bitGoWallet.send({
-    data: data, amount: amount, address: liquidityPoolContract.address,
-    walletPassphrase: 'Evilsia09!@#',
-  });
- console.log(transaction)
- const id = transaction.pendingApproval.id;
- console.log(id);
-   
- const body = {
-
-        "state": "approved"
-    }
-    const response = await fetch(`http://localhost:3080/api/v2/pendingapprovals/${id}`, {
-        method: 'PUT',
-        body: JSON.stringify(body),
-        headers: {
-            'Content-Type': 'application/json',
-            'accept': 'application/json',
-            'Authorization': 'Bearer '
-
-        }
-
-    });
-    const result = await response.json();
-    console.log(result); */
-
-    
-  
-}
-
 
 sendBitGoTx();
