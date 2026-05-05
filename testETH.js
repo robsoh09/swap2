@@ -10,10 +10,10 @@ async function sendBitGoTx() {
   const amountETHMin = 1e17; // Bounds the extent to which the token/WETH price can go up before the transaction reverts. Must be <= msg.value.
   const deadline =  Math.floor(Date.now() / 1000) + 10 * 60;;
 
-  const accessToken = 'v2xa7cfe1d712309ee3b833eb07fd979c7ac0d0164a881e4b98c8fd56ac1a3174d7';
+  const accessToken = '';
   const bitGo = new BitGo({ env: 'test', accessToken: `${accessToken}` });
   const baseCoin = bitGo.coin('bgerch');
-  const walletId = '65938477672fb3f0d6589f564114da1e'
+  const walletId = ''
   const bitGoWallet = await baseCoin.wallets().get({ id: `${walletId}` });
 
   const router = getContractsFactory('eth').getContract('UniswapV2SwapRouter').instance();
@@ -65,7 +65,7 @@ async function sendBitGoTx() {
         headers: {
             'Content-Type': 'application/json',
             'accept': 'application/json',
-            'Authorization': 'Bearer v2x12f24fda2f434e4b7c7f970f51e19bd4a69df5df5a9f98f64ca93d13206e203d'
+            'Authorization': 'Bearer '
 
         }
 
