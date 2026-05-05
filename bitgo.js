@@ -27,7 +27,7 @@ const main = async () => {
   const path = [USDT_ADDRESS, BGER_ADDRESS];
   const deadline = Math.floor(Date.now() / 1000) + 10 * 60;
   
-  const accessToken = 'v2x7bc2261cb6b6cf7d77ee446ca64efd711e86cd0760daf31e2eaeb8eb120c51ea'; //replace with .env or secret mgr in real time  
+  const accessToken = ''; //replace with .env or secret mgr in real time  
 const bitGo = new BitGo({ env: 'test', accessToken: `${accessToken}` }); //login to BitG Test Env
 const coin = bitGo.coin('bgerch'); //ETH token bgerch for swaping 
 const bitGoWallet = await coin.wallets().get({ id: '65938477672fb3f0d6589f564114da1e' }); //set instance to walletId
@@ -47,7 +47,7 @@ const bitGoWallet = await coin.wallets().get({ id: '65938477672fb3f0d6589f564114
 
    const transaction = await bitGoWallet.send({
       data: txInput.data, amount: txInput.amount, address: router.address, to: toAddress,
-      walletPassphrase: 'Evilsia09!@#',
+      walletPassphrase: 
     });
   
     console.log(transaction);
