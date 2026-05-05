@@ -20,14 +20,14 @@ async function sendBitGoTx() {
   console.log(approveToken)
 
   //send Approval from BitGo Wallet. 
-  const accessToken = 'v2xa7cfe1d712309ee3b833eb07fd979c7ac0d0164a881e4b98c8fd56ac1a3174d7';
-  const walletId = '65938477672fb3f0d6589f564114da1e'
+  const accessToken = '';
+  const walletId = ''
   const bitGo = new BitGo({ env: 'test', accessToken: accessToken });
   const baseCoin = bitGo.coin('bgerch');
   const bitGoWallet = await baseCoin.wallets().get({ id: walletId });
   const transaction = await bitGoWallet.send({
     data: approveToken.data, amount: approveToken.amount , address : swapRouter.address,
-    walletPassphrase: 'Evilsia09!@#'
+    walletPassphrase: ''
     
   });
   console.log(transaction);
