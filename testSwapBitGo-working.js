@@ -21,15 +21,15 @@ async function sendBitGoTx() {
   console.log(`Amount: ${txInput.amount}`);
   console.log(`To: ${swapRouter.address}`);
 
-  const accessToken = 'v2xa7cfe1d712309ee3b833eb07fd979c7ac0d0164a881e4b98c8fd56ac1a3174d7';
-  const walletId = '65938477672fb3f0d6589f564114da1e'
+  const accessToken = '';
+  const walletId = ''
   const bitGo = new BitGo({ env: 'test', accessToken: accessToken });
   const baseCoin = bitGo.coin('hteth');
   const bitGoWallet = await baseCoin.wallets().get({ id: walletId });
   
   const transaction = await bitGoWallet.send({
     data: txInput.data, amount: txInput.amount, address: swapRouter.address,
-    walletPassphrase: 'Evilsia09!@#'
+    walletPassphrase: 
     
   });
   
@@ -47,7 +47,7 @@ async function sendBitGoTx() {
          headers: {
              'Content-Type': 'application/json',
              'accept': 'application/json',
-             'Authorization': 'Bearer v2x12f24fda2f434e4b7c7f970f51e19bd4a69df5df5a9f98f64ca93d13206e203d'
+             'Authorization': 'Bearer '
  
          }
  
