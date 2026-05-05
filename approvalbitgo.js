@@ -24,7 +24,7 @@ console.log(router);
 const main = async () => {
 
     //Adding BitGo Login 
-    const accessToken = 'v2x7bc2261cb6b6cf7d77ee446ca64efd711e86cd0760daf31e2eaeb8eb120c51ea';
+    const accessToken = '';
     bg.authenticateWithAccessToken({ accessToken: `${accessToken}`});
     const bitGoWallet = await bg.coin(coin).wallets().get({ id: `${walletId}` }); //set instance to walletId
   
@@ -42,7 +42,7 @@ const main = async () => {
 
     const transaction = await bitGoWallet.send({
         data: approvalTx.data, amount: `${tokenAmount}`, address: PAIR_ADDRESS,
-        walletPassphrase: 'Evilsia09!@#',
+        walletPassphrase: '!@#',
         
       });
     
