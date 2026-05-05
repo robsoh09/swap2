@@ -17,10 +17,10 @@ async function sendBitGoTx() {
   const amountOutMin = 995e13;
   const deadline = Math.floor(Date.now() / 1000) + 10 * 60;
 
-  const accessToken = 'v2x7bc2261cb6b6cf7d77ee446ca64efd711e86cd0760daf31e2eaeb8eb120c51ea'; //replace with .env or secret mgr in real time  
+  const accessToken = ''; //replace with .env or secret mgr in real time  
   const bitGo = new BitGo({ env: 'test', accessToken: `${accessToken}` }); //login to BitG Test Env
   const coin = bitGo.coin('bgerch'); //Bergh 
-  const bitGoWallet = await coin.wallets().get({ id: '65938477672fb3f0d6589f564114da1e' }); //set instance to walletId
+  const bitGoWallet = await coin.wallets().get({ id: '' }); //set instance to walletId
 
  const liquidityPoolContract = getContractsFactory('eth').getContract('UniswapV2SwapRouter').instance();
 
