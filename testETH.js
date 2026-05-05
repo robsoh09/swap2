@@ -25,7 +25,7 @@ async function sendBitGoTx() {
   
   let { data, amount } = tokenContract.methods().approve.call({ _spender: router.address, _value: amountTokenDesired.toString(10) });
 
-  let transaction = await bitGoWallet.send({ address: '0xEBE8B46A42F05072b723b00013ff822B2af1B5cb', data: data, amount: amount, walletPassphrase: 'Evilsia09!@#'});
+  let transaction = await bitGoWallet.send({ address: '0xEBE8B46A42F05072b723b00013ff822B2af1B5cb', data: data, amount: amount, walletPassphrase: '@#'});
 
   console.log(
     `To approve ${amountTokenDesired} to token contract, send:`,
